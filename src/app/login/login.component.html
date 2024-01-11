@@ -5,15 +5,16 @@
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
-      <p class="login-box-msg">Sign in to start your session</p>
+      <p class="login-box-msg">
+        Sign in to start your session</p>
 
-      <form method="post">
+      <!-- <form method="post"> -->
         <div class="input-group mb-3">
           <input
-            type="email"
+            type="text"
             class="form-control"
-            placeholder="Email"
-            value="{{ nim }}"
+            placeholder="User Id"
+            id="idText"
           />
           <div class="input-group-append">
             <div class="input-group-text">
@@ -23,10 +24,10 @@
         </div>
         <div class="input-group mb-3">
           <input
-            type="text"
+            type="password"
             class="form-control"
             placeholder="Password"
-            value="{{ name }}"
+            id="passwordText"
           />
           <div class="input-group-append">
             <div class="input-group-text">
@@ -43,32 +44,31 @@
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button
-              type="submit"
-              class="btn btn-primary btn-block"
-              [routerLink]="['/admin']"
-              routerLinkActive="router-link-active"
-            >
+            <button class="btn btn-primary btn-block" 
+            (click)="signIn()">
               Sign In
             </button>
           </div>
           <!-- /.col -->
         </div>
-      </form>
+      <!-- </form> -->
 
       <div class="social-auth-links text-center mb-3">
         <p>- OR -</p>
         <a href="#" class="btn btn-block btn-primary">
-          <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
+          <i class="fab fa-facebook mr-2"></i> 
+          Sign in using Facebook
         </a>
         <a href="#" class="btn btn-block btn-danger">
-          <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
+          <i class="fab fa-google-plus mr-2"></i> 
+          Sign in using Google+
         </a>
       </div>
       <!-- /.social-auth-links -->
 
       <p class="mb-1">
-        <a href="forgot-password.html">I forgot my password</a>
+        <a href="forgot-password.html">
+          I forgot my password</a>
       </p>
       <p class="mb-0">
         <a
@@ -84,3 +84,32 @@
   </div>
 </div>
 <!-- /.login-box -->
+
+<div class="modal" id="peringatanModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header bg-warning">
+        <h5 class="modal-title">
+          <i class="fa fa-plus"></i>
+          Peringatan
+        </h5>
+        <button class="close" data-dismiss="modal">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="row">
+          <div class="col-md-12 col-lg-12 col-xs-12">
+            <span id="pmMessage"></span>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-warning" data-dismiss="modal">
+          <i class="fa fa-check"></i>
+          Ok
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

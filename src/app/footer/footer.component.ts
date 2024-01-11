@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.css'],
 })
 export class FooterComponent {
-  nim = '212102428';
-  name = 'Endricho';
+  nim = '222102514';
+  name = 'Fauzan Hidayat';
 }

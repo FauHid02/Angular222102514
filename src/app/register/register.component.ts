@@ -9,6 +9,6 @@ export class RegisterComponent {
   constructor(private renderer: Renderer2) {
     this.renderer.addClass(document.body, 'register-page');
   }
-  nim = '212102428';
-  name = 'Endricho';
+  nim = '222102514';
+  name = 'Fauzan hidayat';
 }
